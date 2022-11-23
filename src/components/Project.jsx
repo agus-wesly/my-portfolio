@@ -13,12 +13,12 @@ const ProjectItem = ({ img, name, desc, url }) => (
   </div>
 );
 
-const Project = () => {
+const Project = ({ projectRef }) => {
   return (
-    <div className="w-full flex flex-col py-7 gap-4 items-center">
+    <div ref={projectRef} className="w-full flex flex-col py-7 gap-4 items-center">
       <h1 className="text-center text-lg text-white font-extrabold relative self-center after:content-[''] after:w-full after:absolute after:h-1 after:bg-secondary after:-bottom-1 after:left-0 mb-3">Projects</h1>
-      {projects.map((currProject) => (
-        <ProjectItem url={currProject.url} img={currProject.img} name={currProject.name} desc={currProject.desc} />
+      {projects.map((currProject, i) => (
+        <ProjectItem key={i} url={currProject.url} img={currProject.img} name={currProject.name} desc={currProject.desc} />
       ))}
     </div>
   );

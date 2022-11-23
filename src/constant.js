@@ -5,7 +5,7 @@ import express from "./assets/express.svg";
 import p1 from "./assets/p1.png";
 import p2 from "./assets/p2.png";
 
-export const navItems = ["Skills", "Projects", "Contact"];
+export const navItems = ["Heading", "Skills", "Projects", "Contact"];
 
 export const skillItems = [
   {

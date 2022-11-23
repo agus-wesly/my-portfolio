@@ -1,6 +1,6 @@
-const Talk = () => {
+const Talk = ({ talkRef }) => {
   return (
-    <div className="w-full flex flex-col py-7 gap-4 items-center">
+    <div ref={talkRef} className="w-full flex flex-col py-7 gap-4 items-center">
       <h1 className="text-center text-lg text-white font-extrabold relative self-center after:content-[''] after:w-full after:absolute after:h-1 after:bg-secondary after:-bottom-1 after:left-0 mb-3">Let's Talk</h1>
       <form className="w-full">
         <div className="self-start w-full rounded-md border-secondary border-[0.5px] relative my-7">

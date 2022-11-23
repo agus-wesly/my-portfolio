@@ -2,7 +2,17 @@ import menu from "../assets/menu 1.svg";
 import close from "../assets/close.svg";
 import { navItems } from "../constant";
 
-const Navbar = ({ toggle, setToggle }) => {
+const Navbar = ({ toggle, setToggle, headingRef, projectRef, talkRef, skillRef }) => {
+  const handleNavClick = (ref) => {
+    console.log(ref.offsetTop);
+    window.scrollTo({
+      top: ref.offsetTop - 80,
+      left: 0,
+      behavior: "smooth",
+    });
+    setToggle(false);
+  };
+
   return (
     <div>
       <div className={`flex text-secondary justify-between items-center fixed w-full top-0 left-0 px-6 pt-3 pb-1 bg-secondary/1 backdrop-blur-[4px] z-[5]`}>
@@ -17,9 +27,16 @@ const Navbar = ({ toggle, setToggle }) => {
             <img src={close} alt="close" className="w-6 h-6 object-cover" />
           </span>
           <div className="text-center mt-5 mb-8 h-full justify-start pt-14 gap-8 flex flex-col items-center">
-            {navItems.map((item) => (
-              <span className="text-nl font-nl cursor-pointer text-secondary">{item}</span>
-            ))}
+            <h1 className="text-center text-lg text-white font-extrabold relative self-center after:content-[''] after:w-full after:absolute after:h-1 after:bg-secondary after:-bottom-1 after:left-0 mb-3">Menu</h1>
+            {navItems.map((item, i) => {
+              let currRef;
+              i === 0 ? (currRef = headingRef?.current) : i === 1 ? (currRef = skillRef?.current) : i === 2 ? (currRef = projectRef?.current) : (currRef = talkRef?.current);
+              return (
+                <span onClick={() => handleNavClick(currRef)} className="text-nl font-nl cursor-pointer text-secondary" key={i}>
+                  {item}
+                </span>
+              );
+            })}
           </div>
         </div>
       </div>

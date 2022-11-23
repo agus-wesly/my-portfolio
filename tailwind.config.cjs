@@ -26,8 +26,21 @@ module.exports = {
         sm: "15px",
         xs: "12px",
       },
-      animation: {},
-      keyframes: {},
+      animation: {
+        slide: "slideUp 0.5s ease-in",
+      },
+      keyframes: {
+        slideUp: {
+          from: {
+            transform: "translate(0,20px)",
+            opacity: "0",
+          },
+          to: {
+            transform: "translate(0,0)",
+            opacity: "1",
+          },
+        },
+      },
     },
   },
   plugins: [],

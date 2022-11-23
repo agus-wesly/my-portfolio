@@ -8,10 +8,10 @@ const SkillCard = ({ icon, title, text, idx }) => (
   </div>
 );
 
-const Skill = () => {
+const Skill = ({ skillRef }) => {
   return (
     <>
-      <div className="w-full flex flex-col gap-5 items-center">
+      <div ref={skillRef} className="w-full flex flex-col gap-5 items-center">
         <h1 className="text-center text-lg text-white font-extrabold relative self-center after:content-[''] after:w-full after:absolute after:h-1 after:bg-secondary after:-bottom-1 after:left-0 mb-3">Skills</h1>
       </div>
       {skillItems.map((skill, i) => (

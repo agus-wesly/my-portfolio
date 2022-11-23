@@ -1,6 +1,6 @@
-const Heading = () => {
+const Heading = ({ headingRef }) => {
   return (
-    <div className="w-full my-[5rem] flex flex-col gap-8 text-left relative -z-[0]">
+    <div ref={headingRef} className="w-full my-[5rem] flex flex-col gap-8 text-left relative -z-[0] animate-slide">
       <h5 className="text-secondary tracking-widest font-thin">Hi, my name is </h5>
       <h1 className="text-3xl font-extrabold self-start leading-normal relative text-whiteblue after:content-[''] after:absolute after:h-[3px] after:w-[173px] z-[1] after:z-[1] after:bg-secondary after:bottom-0 after:right-0 after:translate-y-2">
         Agustinus <br /> Wesly Sitanggang.
