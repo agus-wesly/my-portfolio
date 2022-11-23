@@ -27,7 +27,7 @@ module.exports = {
         xs: "12px",
       },
       animation: {
-        slide: "slideUp 0.5s ease-in",
+        slide: "slideUp 0.5s ease-in forwards",
       },
       keyframes: {
         slideUp: {
@@ -43,5 +43,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animation-delay")],
 };
