@@ -18,9 +18,9 @@ function App() {
 
   return (
     <>
-      <div className={`font-Inter px-6 py-5 bg-primary max-w-full relative overflow-x-hidden h-full`}>
+      <div className={`font-Inter px-6 py-5 lg:px-44 lg:py-11 bg-primary max-w-full relative overflow-x-hidden h-full`}>
         <Navbar toggle={toggle} setToggle={setToggle} headingRef={headingRef} skillRef={skillRef} projectRef={projectRef} talkRef={talkRef} />
-        <Heading headingRef={headingRef} />
+        <Heading headingRef={headingRef} talkRef={talkRef} />
         <Skill skillRef={skillRef} />
         <Project projectRef={projectRef} />
         <Talk talkRef={talkRef} />

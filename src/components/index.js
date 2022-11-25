@@ -4,3 +4,6 @@ export { default as Skill } from "./Skill";
 export { default as Project } from "./Project";
 export { default as Talk } from "./Talk";
 export { default as Footer } from "./Footer";
+export { default as Github } from "./Github";
+export { default as Facebook } from "./Facebook";
+export { default as Instagram } from "./Instagram";

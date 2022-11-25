@@ -15,6 +15,7 @@ module.exports = {
       fontWeight: {
         extrabold: "700",
         bold: "600",
+        semibold: "500",
         normal: "300",
         thin: "200",
       },
@@ -40,6 +41,9 @@ module.exports = {
             opacity: "1",
           },
         },
+      },
+      screens: {
+        lg: "992px",
       },
     },
   },

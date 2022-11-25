@@ -11,7 +11,7 @@ export const skillItems = [
   {
     icon: react,
     title: "React",
-    text: "React is one of the most popular javascript framework. Over 6 months of practicing React. And I build total of 4 application.",
+    text: "React is one of the most popular javascript framework. Over 6 months of practicing React. And I build total of 4 applications.",
   },
   {
     icon: tailwind,
@@ -34,13 +34,15 @@ export const projects = [
   {
     img: p1,
     name: "Scrt.ly",
-    desc: "Let’s you send a message to someone without letting they know the sender.",
+    desc: "<p style='color:white'>Let’s you <span style='color:#64FFDA'>send a message</span> to someone without letting they know the sender.</p>",
     url: "https://secret-ly.netlify.app",
+    descSm: "Let’s you send message to someone without letting they know the sender.",
   },
   {
     img: p2,
     name: "CryptoCurrency",
-    desc: "CryptoCurrency is the best app to keep tracking of your favorite crypto coins.",
+    desc: "<p style='color:white'>CryptoCurrency is the best app to keep tracking of your favorite <span style='color:#64FFDA'>crypto</span> coins.</p>",
+    descSm: "CryptoCurrency is the best app to keep tracking of your favorite crypto coins.",
     url: "https://cryptocurrencybyisaac.netlify.app",
   },
 ];
