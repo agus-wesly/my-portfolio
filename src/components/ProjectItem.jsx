@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 
 const ProjectItem = ({ img, name, desc, url, reff, entry, idx, descSm }) => {
-  useEffect(() => {
-    if (entry?.isIntersecting) {
-      entry.target.classList.add("animate-slide");
-    }
-  }, [reff, entry]);
+  // useEffect(() => {
+  //   if (entry?.isIntersecting) {
+  //     entry.target.classList.add(" ");
+  //   }
+  // }, [reff, entry]);
 
   return (
-    <div className={`flex flex-col gap-5 my-5 w-full h-full opacity-0 lg:mt-7 lg:items-center lg:gap-0 lg:my-8 ${idx === 1 ? "lg:flex-row-reverse" : "lg:flex-row"}`} ref={reff}>
+    <div className={`flex flex-col gap-5 my-5 w-full h-full opacity-1 lg:mt-7 lg:items-center lg:gap-0 lg:my-8 ${idx === 1 ? "lg:flex-row-reverse" : "lg:flex-row"}`} ref={reff}>
       <img loading="lazy" src={img} alt="project" className="rounded-[3px] opacity-[0.9] object-contain mix-blend-exclusion lg:w-[600px] lg:aspect-video" />
       <h3 className="text-md font-bold leading-[7px] text-whiteblue lg:hidden">{name}</h3>
       <p className="text-whiteblue font-sm lg:hidden">{descSm}</p>
