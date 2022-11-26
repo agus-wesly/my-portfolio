@@ -45,6 +45,9 @@ module.exports = {
       screens: {
         lg: "992px",
       },
+      backgroundImage: {
+        "input-pattern": "url('src/assets/pattern.png')",
+      },
     },
   },
   plugins: [require("tailwindcss-animation-delay")],

@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 const SkillCard = ({ entry, reff, icon, title, text, idx }) => {
   useEffect(() => {
-    // console.log(entry);
     if (entry?.isIntersecting) {
       entry.target.classList.add("animate-slide");
     }
@@ -16,8 +15,8 @@ const SkillCard = ({ entry, reff, icon, title, text, idx }) => {
     >
       <img loading="lazy" src={icon} alt="icon" className={`h-24 lg:h-32 object-contain ${idx === 3 ? "w-[50%] lg:w-[40%]" : "w-16 lg:w-24"}`} />
       <div className="flex flex-col gap-7 lg:gap-9">
-        <h3 className="text-xl lg:text-[30px] font-bold text-whiteblue leading-[10px]">{title}</h3>
-        <p className="text-nl font-normal text-left leading-7 text-whiteblue">{text}</p>
+        <h3 className="text-xl lg:text-[30px] font-bold text-whiteblue leading-[10px] lg:leading-none">{title}</h3>
+        <p className={`text-nl font-normal text-left leading-7 text-whiteblue ${idx === 3 ? "min-h-auto" : "min-h-[168px]"}`}>{text}</p>
       </div>
     </div>
   );

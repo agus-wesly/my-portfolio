@@ -60,7 +60,6 @@ const Navbar = ({ toggle, setToggle, headingRef, projectRef, talkRef, skillRef }
           {navItems.map((item, i) => {
             let currRef;
             i === 0 ? (currRef = headingRef?.current) : i === 1 ? (currRef = skillRef?.current) : i === 2 ? (currRef = projectRef?.current) : (currRef = talkRef?.current);
-            console.log(currRef);
             return (
               <span onClick={() => handleNavLg(currRef)} className="text-nl font-semibold cursor-pointer text-whiteblue hover:text-secondary transition duration-500" key={i}>
                 {item}

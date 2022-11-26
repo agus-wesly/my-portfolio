@@ -13,7 +13,7 @@ body.blurr {
   overflow: hidden;
 }
 
-svg {
+svg:not(.no-effect) {
   stroke: #ccd6f6;
   width: 22px;
   height: 22px;
