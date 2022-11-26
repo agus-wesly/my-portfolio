@@ -1,15 +1,15 @@
 import { useEffect } from "react";
 const SkillCard = ({ entry, reff, icon, title, text, idx }) => {
-  // useEffect(() => {
-  //   if (entry?.isIntersecting) {
-  //     entry.target.classList.add(" ");
-  //   }
-  // }, [entry, reff]);
+  useEffect(() => {
+    if (entry?.isIntersecting) {
+      entry.target.classList.add("animate-slide");
+    }
+  }, [entry, reff]);
 
   return (
     <div
       ref={reff}
-      className={`bg-darkblue min-h-[280px] lg:h-full gap-7 my-5 lg:my-0 border-secondary border-[0.5px] py-8 px-5 lg:px-8 rounded-sm lg:w-full h-full flex flex-col opacity-1 self-center ${
+      className={`bg-darkblue min-h-[280px] lg:h-full gap-7 my-5 lg:my-0 border-secondary border-[0.5px] py-8 px-5 lg:px-8 rounded-sm lg:w-full h-full flex flex-col  opacity-0 self-center ${
         idx === 3 ? "col-span-2 lg:justify-evenly lg:h-full lg:flex-row lg:items-center" : idx === 2 ? "row-span-2 gap-10 lg:justify-start lg:h-full" : "justify-between"
       }`}
     >
