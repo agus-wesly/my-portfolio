@@ -79,9 +79,7 @@ const Talk = ({ talkRef }) => {
           <div className="w-[50%] h-full bg-input-pattern bg-secondary bg-cover rounded-r-lg rounded-bl-lg"></div>
         </div>
       </form>
-      <div
-        className={`fixed bg-[#30FFCE] opacity-0 flex items-center gap-3 text-sm font-bold rounded-sm shadow-sm z-[6] top-11 right-6 p-3 ${sentSuccess ? "translate-x-0  opacity-0" : "translate-x-full  opacity-0"} transition duration-500`}
-      >
+      <div className={`fixed bg-[#30FFCE] flex items-center gap-3 text-sm font-bold rounded-sm shadow-sm z-[6] top-11 right-6 p-3 ${sentSuccess ? "translate-x-0  opacity-1" : "translate-x-full  opacity-0"} transition duration-500`}>
         <span>{<Check color={"#0A192F"} />}</span>
         <p>Message sent !</p>
       </div>
