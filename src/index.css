@@ -25,3 +25,7 @@ svg:hover {
   stroke: #64ffda;
   translate: 0 -3px;
 }
+
+.bg-pattern {
+  background-image: url("src/assets/pattern.png");
+}

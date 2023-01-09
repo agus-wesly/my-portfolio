@@ -4,6 +4,7 @@ import tailwind from "./assets/tailwind.svg";
 import express from "./assets/express.svg";
 import p1 from "./assets/p1.png";
 import p2 from "./assets/p2.png";
+import p3 from "./assets/p3.png";
 
 export const navItems = ["About me", "Skills", "Projects", "Contact"];
 
@@ -36,13 +37,23 @@ export const projects = [
     name: "Scrt.ly",
     desc: "<p style='color:white'>Let’s you <span style='color:#64FFDA'>send a message</span> to someone without letting they know the sender.</p>",
     url: "https://secret-ly.netlify.app",
-    descSm: "Let’s you send message to someone without letting they know the sender.",
+    descSm:
+      "Let’s you send message to someone without letting they know the sender.",
   },
   {
     img: p2,
     name: "CryptoCurrency",
     desc: "<p style='color:white'>CryptoCurrency is the best app to keep tracking of your favorite <span style='color:#64FFDA'>crypto</span> coins.</p>",
-    descSm: "CryptoCurrency is the best app to keep tracking of your favorite crypto coins.",
+    descSm:
+      "CryptoCurrency is the best app to keep tracking of your favorite crypto coins.",
     url: "https://cryptocurrencybyisaac.netlify.app",
+  },
+  {
+    img: p3,
+    name: "CH-STORE",
+    desc: "<p style='color:white'>Simple e-commerce app for your product. Using <span style='color:#64FFDA'>Next.JS13</span> as it's framework</p>",
+    descSm:
+      "CryptoCurrency is the best app to keep tracking of your favorite crypto coins.",
+    url: "https://ch-store-tawny.vercel.app",
   },
 ];
