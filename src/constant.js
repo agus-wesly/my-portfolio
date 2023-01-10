@@ -51,9 +51,9 @@ export const projects = [
   {
     img: p3,
     name: "CH-STORE",
-    desc: "<p style='color:white'>Simple e-commerce app for your product. Using <span style='color:#64FFDA'>Next.JS13</span> as it's framework</p>",
+    desc: "<p style='color:white'>Simple e-commerce app for your product. Using <span style='color:#64FFDA'>Next.JS 13</span> as it's framework</p>",
     descSm:
-      "CryptoCurrency is the best app to keep tracking of your favorite crypto coins.",
+      "Simple e-commerce app for your product. Using Next.JS 13 as it's framework",
     url: "https://ch-store-tawny.vercel.app",
   },
 ];

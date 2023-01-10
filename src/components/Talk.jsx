@@ -10,8 +10,10 @@ const Talk = ({ talkRef }) => {
   const formRef = useRef();
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
 
+    if (!emailMsg || !msg) return;
+
+    setLoading(true);
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAIL_SERVICE_ID,
