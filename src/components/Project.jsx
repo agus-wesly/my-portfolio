@@ -1,11 +1,12 @@
-import { projects } from "../constant";
-import ProjectItem from "./ProjectItem";
-import { useInView } from "react-intersection-observer";
+import { projects } from "../constant"
+import ProjectItem from "./ProjectItem"
+import { useInView } from "react-intersection-observer"
 
 const Project = ({ projectRef }) => {
-  const { ref: p1Ref, entry: p1Entry } = useInView();
-  const { ref: p2Ref, entry: p2Entry } = useInView();
-  const { ref: p3Ref, entry: p3Entry } = useInView();
+  const { ref: p1Ref, entry: p1Entry } = useInView()
+  const { ref: p2Ref, entry: p2Entry } = useInView()
+  const { ref: p3Ref, entry: p3Entry } = useInView()
+  const { ref: p4Ref, entry: p4Entry } = useInView()
   const refArr = [
     {
       ref: p1Ref,
@@ -19,7 +20,11 @@ const Project = ({ projectRef }) => {
       ref: p3Ref,
       entry: p3Entry,
     },
-  ];
+    {
+      ref: p4Ref,
+      entry: p4Entry,
+    },
+  ]
   return (
     <div
       ref={projectRef}
@@ -42,7 +47,7 @@ const Project = ({ projectRef }) => {
         />
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default Project;
+export default Project

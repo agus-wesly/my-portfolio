@@ -1,19 +1,20 @@
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
-import Check from "./Check";
+import { useRef, useState } from "react"
+import pattern from "../assets/pattern.png"
+import emailjs from "@emailjs/browser"
+import Check from "./Check"
 
 const Talk = ({ talkRef }) => {
-  const [emailMsg, setEmailMsg] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [msg, setMsg] = useState("");
-  const [sentSuccess, setSentSuccess] = useState(false);
-  const formRef = useRef();
+  const [emailMsg, setEmailMsg] = useState("")
+  const [loading, setLoading] = useState(false)
+  const [msg, setMsg] = useState("")
+  const [sentSuccess, setSentSuccess] = useState(false)
+  const formRef = useRef()
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
-    if (!emailMsg || !msg) return;
+    if (!emailMsg || !msg) return
 
-    setLoading(true);
+    setLoading(true)
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAIL_SERVICE_ID,
@@ -24,21 +25,21 @@ const Talk = ({ talkRef }) => {
       .then(
         (result) => {
           if (result?.status === 200) {
-            setLoading(false);
-            setSentSuccess(true);
-            setEmailMsg("");
-            setMsg("");
+            setLoading(false)
+            setSentSuccess(true)
+            setEmailMsg("")
+            setMsg("")
             setTimeout(() => {
-              setSentSuccess(false);
-            }, 2000);
+              setSentSuccess(false)
+            }, 2000)
           }
         },
         (error) => {
-          console.error(error);
-          setLoading(false);
+          console.error(error)
+          setLoading(false)
         }
-      );
-  };
+      )
+  }
   return (
     <div ref={talkRef} className="w-full flex flex-col py-7 gap-4 items-center">
       <h1 className="text-center text-lg lg:text-[32px] text-white font-extrabold relative self-center after:content-[''] after:w-full after:absolute after:h-1 after:bg-secondary after:-bottom-1 after:left-0 mb-3 lg:mb-7">
@@ -129,7 +130,9 @@ const Talk = ({ talkRef }) => {
               {loading ? "Sending..." : "Send"}
             </button>
           </div>
-          <div className="w-[50%] h-full bg-pattern bg-secondary bg-cover rounded-r-lg rounded-bl-lg"></div>
+          <div className="w-[50%] h-full  bg-secondary bg-cover rounded-r-lg rounded-bl-lg relative">
+            <img src={pattern} className="absolute inset-0 " />
+          </div>
         </div>
       </form>
       <div
@@ -143,7 +146,7 @@ const Talk = ({ talkRef }) => {
         <p>Message sent !</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Talk;
+export default Talk

@@ -1,12 +1,14 @@
-import react from "./assets/react.svg";
-import redux from "./assets/redux.svg";
-import tailwind from "./assets/tailwind.svg";
-import express from "./assets/express.svg";
-import p1 from "./assets/p1.png";
-import p2 from "./assets/p2.png";
-import p3 from "./assets/p3.png";
+import react from "./assets/react.svg"
+import redux from "./assets/redux.svg"
+import tailwind from "./assets/tailwind.svg"
+import express from "./assets/express.svg"
+import vue from "./assets/vue.svg"
+import p1 from "./assets/p1.png"
+import p2 from "./assets/p2.png"
+import p3 from "./assets/p3.png"
+import p4 from "./assets/p4.png"
 
-export const navItems = ["About me", "Skills", "Projects", "Contact"];
+export const navItems = ["About me", "Skills", "Projects", "Contact"]
 
 export const skillItems = [
   {
@@ -29,7 +31,12 @@ export const skillItems = [
     title: "Express JS",
     text: "This node js framework is very easy to use. I always use express to build a backend server for my aplication. ",
   },
-];
+  {
+    icon: vue,
+    title: "Vue.JS",
+    text: "Vue.js is a powerful and flexible JavaScript framework for building modern web applications. With its intuitive and easy-to-learn syntax, Vue.js allows developers to quickly create dynamic user interfaces with minimal effort.",
+  },
+]
 
 export const projects = [
   {
@@ -56,4 +63,11 @@ export const projects = [
       "Simple e-commerce app for your product. Using Next.JS 13 as it's framework",
     url: "https://ch-store-tawny.vercel.app",
   },
-];
+  {
+    img: p4,
+    name: "Twitter clone",
+    desc: "<p style='color:white'>Twitter cloning that is built with <span style='color:#64FFDA'>Nuxt.JS</span></p>",
+    descSm: "Twitter cloning that is built with Nuxt.JS",
+    url: "https://twitter-clone-isaac.vercel.app",
+  },
+]
