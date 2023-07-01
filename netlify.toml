@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/*"
+to = "https://agus-wesly.vercel.app/"
+status = 200
